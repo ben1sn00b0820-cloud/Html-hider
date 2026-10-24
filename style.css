@@ -1,0 +1,31 @@
+/* 1.0.2: override only the legacy Moxu 1.0.1 display switch. */
+:root {
+  --mx-html-source-display: block !important;
+}
+
+/* The repeated ID gives this rule priority over older Moxu theme selectors. */
+#chat#chat .moxu-source-guard-hidden {
+  display: none !important;
+}
+
+/* An embed inserted by another renderer becomes visible immediately. */
+@supports selector(pre:has(iframe)) {
+  #chat#chat .moxu-source-guard-hidden:has(iframe, object, embed) {
+    display: revert !important;
+  }
+}
+
+#moxu-source-guard-settings .moxu-source-guard-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+#moxu-source-guard-settings .moxu-source-guard-note {
+  margin: 4px 0 10px;
+  font-size: .9em;
+  opacity: .8;
+  line-height: 1.5;
+}

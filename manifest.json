@@ -1,0 +1,11 @@
+{
+  "display_name": "墨序 HTML 原始碼隱藏器",
+  "loading_order": 99,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "Moxu contributors",
+  "version": "1.0.2",
+  "homePage": "https://github.com/ben1sn00b0820-cloud/Html-hider"
+}
